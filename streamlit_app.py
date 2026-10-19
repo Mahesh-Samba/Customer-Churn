@@ -18,7 +18,7 @@ def load_data(path=None):
 
     df = pd.read_csv(path)
     return df
-
+ 
 # @st.cache_data
 # def load_data(path=r'F:\KN Academy - Projects\Machine Learning\Telecom Customer Churn\Customer-Churn (1).csv'):
 #     df = pd.read_csv(path)

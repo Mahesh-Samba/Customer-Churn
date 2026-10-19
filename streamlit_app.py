@@ -117,7 +117,11 @@ def main():
         cols_to_ask = [c for c in sample.columns if c not in ['customerID', 'Churn', 'tenure', 'tenure_bin']]
 
         for col in cols_to_ask:
-            if sample[col].dtype == 'object' or sample[col].dtype.name == 'category':
+            if (
+                    pd.api.types.is_object_dtype(sample[col])
+                    or pd.api.types.is_string_dtype(sample[col].dtype)
+                    or isinstance(sample[col].dtype, pd.CategoricalDtype)
+                ):
                 opts = sorted(sample[col].dropna().unique().tolist())
                 user_input[col] = st.selectbox(col, opts)
             else:

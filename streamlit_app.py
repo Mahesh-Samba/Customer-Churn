@@ -6,11 +6,23 @@ import numpy as np
 import joblib
 from sklearn.preprocessing import StandardScaler
 
+from pathlib import Path
+
 # Utility functions
+APP_DIR = Path(__file__).resolve().parent
+
 @st.cache_data
-def load_data(path=r'F:\KN Academy - Projects\Machine Learning\Telecom Customer Churn\Customer-Churn (1).csv'):
+def load_data(path=None):
+    if path is None:
+        path = APP_DIR / "Customer-Churn (1).csv"
+
     df = pd.read_csv(path)
     return df
+
+# @st.cache_data
+# def load_data(path=r'F:\KN Academy - Projects\Machine Learning\Telecom Customer Churn\Customer-Churn (1).csv'):
+#     df = pd.read_csv(path)
+#     return df
 
 @st.cache_resource
 def build_preprocessor(df):

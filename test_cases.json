@@ -1,0 +1,75 @@
+
+[
+  {
+    "test_case_id": "TC001",
+    "scenario": "New fiber customer, month-to-month contract",
+    "input": {
+      "tenure": 1,
+      "gender": "Male",
+      "SeniorCitizen": 0,
+      "Partner": "No",
+      "Dependents": "No",
+      "MultipleLines": "No",
+      "InternetService": "Fiber optic",
+      "OnlineSecurity": "No",
+      "OnlineBackup": "No",
+      "DeviceProtection": "No",
+      "TechSupport": "No",
+      "StreamingTV": "Yes",
+      "StreamingMovies": "Yes",
+      "Contract": "Month-to-month",
+      "PaperlessBilling": "Yes",
+      "PaymentMethod": "Electronic check",
+      "MonthlyCharges": 85.0,
+      "TotalCharges": 85.0
+    }
+  },
+  {
+    "test_case_id": "TC002",
+    "scenario": "Long-tenure DSL customer, two-year contract",
+    "input": {
+      "tenure": 72,
+      "gender": "Female",
+      "SeniorCitizen": 0,
+      "Partner": "Yes",
+      "Dependents": "Yes",
+      "MultipleLines": "Yes",
+      "InternetService": "DSL",
+      "OnlineSecurity": "Yes",
+      "OnlineBackup": "Yes",
+      "DeviceProtection": "Yes",
+      "TechSupport": "Yes",
+      "StreamingTV": "No",
+      "StreamingMovies": "No",
+      "Contract": "Two year",
+      "PaperlessBilling": "No",
+      "PaymentMethod": "Credit card (automatic)",
+      "MonthlyCharges": 70.3,
+      "TotalCharges": 5061.6
+    }
+  },
+  {
+    "test_case_id": "TC003",
+    "scenario": "Customer without internet service",
+    "input": {
+      "tenure": 18,
+      "gender": "Female",
+      "SeniorCitizen": 1,
+      "Partner": "No",
+      "Dependents": "No",
+      "MultipleLines": "No",
+      "InternetService": "No",
+      "OnlineSecurity": "No internet service",
+      "OnlineBackup": "No internet service",
+      "DeviceProtection": "No internet service",
+      "TechSupport": "No internet service",
+      "StreamingTV": "No internet service",
+      "StreamingMovies": "No internet service",
+      "Contract": "One year",
+      "PaperlessBilling": "No",
+      "PaymentMethod": "Mailed check",
+      "MonthlyCharges": 25.0,
+      "TotalCharges": 450.0
+    }
+  }
+]

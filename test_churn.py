@@ -9,9 +9,14 @@ from churn_prediction import predict_churn
 
 
 BASE_DIR = Path(__file__).resolve().parent
+APP_DIR = Path(__file__).resolve().parent
 
 CASES_PATH = BASE_DIR / "test_cases.json"
 RESULTS_PATH = BASE_DIR / "prediction_results.json"
+
+
+# Utility functions
+APP_DIR = Path(__file__).resolve().parent
 
 CASES = json.loads(
     CASES_PATH.read_text(encoding="utf-8")

@@ -2,11 +2,15 @@
 import os
 import streamlit_app as app
 
+from pathlib import Path
+
+APP_DIR = Path(__file__).resolve().parent
+
 DEFAULT_DATA_PATH = (
-    r"F:\KN Academy - Projects\Machine Learning\Telecom Customer Churn\Customer-Churn (1).csv"
+   path = APP_DIR / "Customer-Churn (1).csv"
 )
 
-DEFAULT_MODEL_PATH = r"F:\KN Academy - Projects\Machine Learning\Telecom Customer Churn\best_xgboost_churn_model.pkl"
+# DEFAULT_MODEL_PATH = r"F:\KN Academy - Projects\Machine Learning\Telecom Customer Churn\best_xgboost_churn_model.pkl"
 
 
 def predict_churn(user_input, data_path=None, model_path=None):
@@ -18,8 +22,7 @@ def predict_churn(user_input, data_path=None, model_path=None):
 
     model_path = (
         model_path
-        or os.getenv(r"F:\KN Academy - Projects\Machine Learning\Telecom Customer Churn\best_xgboost_churn_model.pkl")
-        or DEFAULT_MODEL_PATH
+        or os.getenv(path='best_xgboost_churn_model.pkl')
     )
 
     # Reuse your existing application functions

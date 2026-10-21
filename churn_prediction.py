@@ -6,9 +6,8 @@ from pathlib import Path
 
 APP_DIR = Path(__file__).resolve().parent
 
-DEFAULT_DATA_PATH = (
-   path = APP_DIR / "Customer-Churn (1).csv"
-)
+DEFAULT_DATA_PATH = APP_DIR / "Customer-Churn (1).csv"
+
 
 # DEFAULT_MODEL_PATH = r"F:\KN Academy - Projects\Machine Learning\Telecom Customer Churn\best_xgboost_churn_model.pkl"
 

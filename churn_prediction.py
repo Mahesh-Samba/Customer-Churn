@@ -19,10 +19,8 @@ def predict_churn(user_input, data_path=None, model_path=None):
         or DEFAULT_DATA_PATH
     )
 
-    model_path = (
-        model_path
-        or os.getenv(path='best_xgboost_churn_model.pkl')
-    )
+    model_path = APP_DIR/'best_xgboost_churn_model.pkl'
+    
 
     # Reuse your existing application functions
     df = app.load_data(data_path)
